@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    build: dockerfile
+    working_dir: "/app"
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/app
+    shm_size: 512 # 一時ファイル領域(MB)
